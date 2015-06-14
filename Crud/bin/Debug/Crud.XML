@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Crud</name>
+    </assembly>
+    <members>
+        <member name="T:Crud.Business.CommonFunctions">
+            <summary>
+            共通項目クラス
+            </summary>
+        </member>
+        <member name="M:Crud.Business.CommonFunctions.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:Crud.Business.CommonFunctions.JCalender(System.String)">
+            <summary>
+            西暦→和暦変換
+            </summary>
+            <returns>和暦を返す</returns>
+        </member>
+        <member name="T:Crud.Data.DbCarClassTable">
+            <summary>
+            CarClassテーブルを操作するクラス
+            </summary>
+        </member>
+        <member name="T:Crud.Data.DbConnection">
+            <summary>
+            データベースコネクションクラス
+            </summary>
+        </member>
+        <member name="M:Crud.Data.DbConnection.Connection(System.String)">
+            <summary>
+            データベース接続
+            </summary>
+            <param name="sql">SQL文</param>
+            <returns>SQLコマンド</returns>
+        </member>
+        <member name="M:Crud.Data.DbCarClassTable.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="T:Crud.Data.DbCarTable">
+            <summary>
+            Carテーブル処理クラス
+            </summary>
+        </member>
+        <member name="M:Crud.Data.DbCarTable.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:Crud.Data.DbCarTable.SelectCarJoinVc(System.Collections.Generic.List{System.String})">
+            <summary>
+            FrmSearchクラスのDataGridViewに表示するデータを取得する
+            </summary>
+            <param name="comp"></param>
+        </member>
+        <member name="M:Crud.Data.DbCarTable.SelectCar(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Crud.Data.DbCarTable.setCarTable(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            テーブルをセット
+            </summary>
+            <param name="command">SQL文</param>
+            <returns>Carテーブルのデータセットを返す</returns>
+        </member>
+        <member name="M:Crud.Data.DbCarTable.DeleteRow(System.Int32)">
+            <summary>
+            dataGridViewにて選択された行を削除
+            </summary>
+        </member>
+        <member name="T:Crud.Presentation.FrmRegister">
+            <summary>
+            追加登録画面
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.#ctor(System.Int32)">
+            <summary>
+            変数の初期化
+            </summary>
+            <param name="id">検索画面で選択された行の主キーの値</param>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.Register_Load(System.Object,System.EventArgs)">
+            <summary>
+            検索画面で行が選択されている場合、データを表示
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.buttonRegister_Click(System.Object,System.EventArgs)">
+            <summary>
+            入力されたデータをCarテーブルに登録する
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.carTableUpdate">
+            <summary>
+            検索画面でレコードが選択されている場合、Carテーブルをアップデート
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.carTableInsert">
+            <summary>
+            CarテーブルとRunテーブルに追加
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.runTableUpdate">
+            <summary>
+            Carテーブルをアップデートする際に実行
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.runTableInsert">
+            <summary>
+            Runテーブルに走行履歴等を追加登録
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.getTable(System.String)">
+            <summary>
+            データベースとコネクションを確立
+            </summary>
+            <param name="sql"></param>
+            <returns>SqlDataAdapter</returns>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.buttonBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            検索画面に戻る
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Crud.Presentation.FrmRegister.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Crud.Presentation.FrmRegister.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Crud.Presentation.FrmSearch">
+            <summary>
+            検索画面クラス
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.#ctor">
+            <summary>
+            検索画面
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.FrmSearch_Load(System.Object,System.EventArgs)">
+            <summary>
+            フォーム生成時に、dataGridViewにデータを表示
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.searchBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            検索ボタンを押下した際のイベント
+            テキストボックスに入っている値を取得して、SQL文を発行
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.deleteBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            選択されたDataGridViewの行を削除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.deleteDataTable">
+            <summary>
+            選択されたレコードの削除処理
+            </summary>
+            <param name="sqlcon">Carテーブルを取得</param>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.detailbtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            明細画面に遷移する
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.addbtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            追加画面に遷移する
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Crud.Presentation.FrmSearch.components">
+            <summary>
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:Crud.Presentation.FrmSearch.InitializeComponent">
+            <summary>
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="T:Crud.Presentation.FrmDetail">
+            <summary>
+            明細画面クラス
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.#ctor(System.Int32)">
+            <summary>
+            検索画面から主キーの値を受け取る
+            </summary>
+            <param name="key">Carテーブルの主キーの値</param>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.formDetail_Load(System.Object,System.EventArgs)">
+            <summary>
+            テーブルからデータの出力
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.getTableData(System.String)">
+            <summary>
+            データベースとコネクションを取り、コマンドをを返す
+            </summary>
+            <param name="sqlTemp"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.buttonRenewal_Click(System.Object,System.EventArgs)">
+            <summary>
+            データベース更新処理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.getRenewalDTable(System.String)">
+            <summary>
+            データベースの更新
+            </summary>
+            <param name="sqlCon"></param>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.buttonBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            検索画面に戻る
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Crud.Presentation.FrmDetail.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Crud.Presentation.FrmDetail.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Crud.Program.Main">
+            <summary>
+            アプリケーションのメイン エントリ ポイントです。
+            </summary>
+        </member>
+        <member name="T:Crud.Properties.Resources">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:Crud.Properties.Resources.ResourceManager">
+            <summary>
+              このクラスに使用される、キャッシュされた ResourceManager のインスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:Crud.Properties.Resources.Culture">
+            <summary>
+              厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+    </members>
+</doc>

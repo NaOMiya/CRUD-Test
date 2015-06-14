@@ -1,0 +1,5 @@
+c:\CHIIKI\Technology\Crudr\Crud\Crud\Car\bin\Debug\Car.dll
+c:\CHIIKI\Technology\Crudr\Crud\Crud\Car\bin\Debug\Car.pdb
+c:\CHIIKI\Technology\Crudr\Crud\Crud\Car\obj\Debug\Car.csprojResolveAssemblyReference.cache
+c:\CHIIKI\Technology\Crudr\Crud\Crud\Car\obj\Debug\Car.dll
+c:\CHIIKI\Technology\Crudr\Crud\Crud\Car\obj\Debug\Car.pdb
